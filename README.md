@@ -19,7 +19,7 @@ To clone and run this application, you'll need Git and Node.js (which comes with
 
 ```bash
 # Clone this repository
-$ git clone  
+$ git clone https://github.com/kevin-sg/socket_server_practice_v1.git
 
 # Install dependencies
 $ yarn install
