@@ -1,6 +1,6 @@
 import * as cors from "cors";
 
-import { environmentVariables } from "./environment.utility";
+import { environmentVariables } from "@/global";
 
 const whitList = [environmentVariables.HOST_CLIENT];
 

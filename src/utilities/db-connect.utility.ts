@@ -1,6 +1,7 @@
 import "dotenv/config";
 import * as mongoose from "mongoose";
-import { environmentVariables } from "./environment.utility";
+
+import { environmentVariables } from "@/global";
 
 if (!environmentVariables.MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI environment variable inside .env");

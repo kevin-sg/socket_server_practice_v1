@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { Server } from "@/models";
 
-const app = new Server();
+const app = Server.instance;
 
 // Start app
 app.listen();
