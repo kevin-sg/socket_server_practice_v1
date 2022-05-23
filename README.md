@@ -6,7 +6,6 @@
 - Express
 - Socket.io
 - TypeScript
-- MongoDB(optional)
 
 ## Linting & Formatter
 

@@ -1,11 +1,6 @@
-interface EnvironmentVariables {
-  HOST_PORT: number;
-  HOST_CLIENT: string;
-  MONGODB_URI: string;
-}
+import type { IEnvironmentVariables } from "@/global/global-types";
 
-export const environmentVariables: EnvironmentVariables = {
+export const environmentVariables: IEnvironmentVariables = {
   HOST_PORT: parseInt(process.env.PORT as string),
-  HOST_CLIENT: process.env.HOST_CLIENTE as string,
-  MONGODB_URI: process.env.MONGODB_URI as string,
+  HOST_CLIENT: process.env.HOST_CLIENT as string,
 };

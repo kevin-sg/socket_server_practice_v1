@@ -1,17 +1,13 @@
 import * as SocketIO from "socket.io";
 
-import { ChatMessageController } from "@/controllers";
-
-interface SocketControllerProps {
-  ioServer: SocketIO.Server;
-  socketClient: SocketIO.Socket;
-}
+import { BandController } from "@/controllers";
+import type { ISocketControllerProps } from "@/global/global-types";
 
 class SocketController {
   private io: SocketIO.Server;
   private socket: SocketIO.Socket;
 
-  constructor({ ioServer, socketClient }: SocketControllerProps) {
+  constructor({ ioServer, socketClient }: ISocketControllerProps) {
     this.io = ioServer;
     this.socket = socketClient;
 
@@ -19,10 +15,7 @@ class SocketController {
   }
 
   private socketEvents() {
-    // eslint-disable-next-line no-console
-    console.log("Client connected!", this.socket.id);
-
-    new ChatMessageController({ ioServer: this.io, socketClient: this.socket });
+    new BandController({ ioServer: this.io, socketClient: this.socket });
   }
 }
 
