@@ -21,8 +21,6 @@ class ChatMessageController {
 
   private sendMessage() {
     this.socket.on(socketKeyEvents.MESSAGE_TO_SERVER, ({ from, message }) => {
-      // eslint-disable-next-line no-console
-      console.log(socketKeyEvents.MESSAGE_TO_SERVER, ":", { from, message });
       const messageSettings = new MessageSettings({ from, message });
       this.io.emit(socketKeyEvents.MESSAGE_FROM_SERVER, messageSettings.message);
     });

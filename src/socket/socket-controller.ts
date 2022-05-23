@@ -19,9 +19,6 @@ class SocketController {
   }
 
   private socketEvents() {
-    // eslint-disable-next-line no-console
-    console.log("Client connected!", this.socket.id);
-
     new ChatMessageController({ ioServer: this.io, socketClient: this.socket });
   }
 }
