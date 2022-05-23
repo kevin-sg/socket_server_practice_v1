@@ -7,7 +7,7 @@ class Band {
   public name: string;
   public votes: number;
 
-  constructor({ name = "" }: IBandProps) {
+  constructor({ name }: IBandProps) {
     this.id = uuidv4();
     this.name = name.trim();
     this.votes = 0;
