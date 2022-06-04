@@ -6,6 +6,7 @@ import * as SocketIO from "socket.io";
 
 export interface IEnvironmentVariables {
   HOST_PORT: number;
+  HOST_LOCAL: string;
   HOST_CLIENT: string;
 }
 
